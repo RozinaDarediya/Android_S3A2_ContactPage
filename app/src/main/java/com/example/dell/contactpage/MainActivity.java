@@ -14,6 +14,7 @@ import android.widget.Button;
 
 public class MainActivity extends AppCompatActivity  {
 
+    // As the application will launch it will display contacts page of our phone.
     Button button;
      final int CONTACT_PICKER_RESULT=1;
     @Override
@@ -23,6 +24,10 @@ public class MainActivity extends AppCompatActivity  {
     }
 
     @TargetApi(Build.VERSION_CODES.JELLY_BEAN)
+
+    //using intent the button will take us to our contact page of mobile
+    // used startActivityForResult() to get the result
+
     public void showContacts(View view){
 
         Intent intent = new Intent(Intent.ACTION_PICK, Uri.parse("content://contacts"));
